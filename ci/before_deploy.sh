@@ -17,7 +17,7 @@ main() {
 
     test -f Cargo.lock || cargo generate-lockfile
 
-    cross rustc --bin hello-tool --target $TARGET --release -- -C lto
+    cross rustc --bin hello-cjtool --target $TARGET --release -- -C lto
 
     cp target/$TARGET/release/hello-cjtool $stage/
 
